@@ -1,0 +1,124 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  background: url(../img/bg1.jpg);
+  max-height: 100%;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*FAQ*/
+.bayan {
+  display: flex;
+
+  color: #fff;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 2px 13px;
+}
+.box {
+  max-width: 500px;
+  margin: 10px auto;
+}
+.box-item {
+  border: 2px solid rgb(206, 72, 48);
+  border-radius: 3px;
+  margin-bottom: 2px;
+
+  color: #fff;
+}
+.box-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  font-size: medium;
+
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+}
+
+.box-title:hover {
+  background-color: rgb(215, 41, 41);
+}
+.box-title::after {
+  content: "";
+  display: block;
+
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #ecf1f5 transparent transparent transparent;
+
+  position: absolute;
+  right: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.box-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+
+  position: absolute;
+}
+.box-input:checked ~ .box-title {
+  background-color: rgb(215, 41, 41);
+}
+.box-input:checked ~ .box-title::after {
+  border-style: solid;
+  border-width: 4px 0 4px 10px;
+  border-color: transparent transparent transparent #f2f4f6;
+}
+
+.box-input:checked ~ .box-text {
+  display: block;
+}
+.box-text {
+  color: #fff;
+  display: none;
+  font-size: 0.7rem;
+  padding: 10px 15px;
+  background: #e3ed51;
+}
+.box-text > img {
+  width: 20%;
+  height: 15%;
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.box-text > img:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 320x568) {
+  .box-text {
+    display: flex;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 820x1180) {
+  .box-text {
+    display: flex;
+  }
+}
+
+@media (min-width: 1920×1080) {
+  .box-text {
+    display: flex;
+  }
+}
